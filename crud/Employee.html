@@ -1,0 +1,83 @@
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Table for employee details</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">  
+
+  </head>
+  <body>
+    <div class="openSideBarMenu">
+    <div id="header">
+      <input type="checkbox" id="openSideBarMenu" hidden>
+      <label for="openSideBarMenu" id="sidebarIconToggle">
+          <div class="ham-burger"></div>
+          <div class="ham-burger"></div>
+          <div class="ham-burger"></div>
+      </label>
+      <div id= "sidebarMenu">
+          <ul class="menubar">
+              <li><a href="./index.html">Back Home</a></li>
+              <li><a href="./Department.html"> Back Department</a></li>
+          </ul>
+      </div>
+  </div>
+</div>
+
+    <div class="container">
+      
+      <h1>Employee Details</h1>
+          <div class="row" >
+            <div class="col-sm-4">
+              <div class ="col-sm-8">
+                <button onclick="window.location.href = './Employee_form.html';"><i class="material-icons">&#xE147;</i>Add Employee</button>
+              </div>
+              <div class="input_section">
+            <label for="search"></label><br />
+            <input
+              type="text"
+              class="form-control"
+              id="searchbar" onkeyup="search()"
+              name="search"
+              placeholder="Search"
+              autocomplete="off"
+            /><br/>
+              </div>
+            </div>
+         </div>
+        
+              <div class="table-items">
+                <table  id ='myTable' >
+                 <thead class="thead-dark" id="tablehead">
+                    <br /><br /><br />
+          
+                    <tr>
+                      <th onClick="sort('id');">ID</th>
+                      <th  onClick="sort('name');">Name</th>
+                      <th  onClick="sort('age');">Age</th>
+                      <th>Action</th>
+                    </tr>
+                  </thead>
+                  <tbody id="showResult">
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+      
+            
+
+        </div>
+        <div  id="pagination">
+          <input type="button" id="first" onclick="firstPage()" value="first" />
+          <input type="button" id="next" onclick="nextPage()" value="next" />
+          <input type="button" id="previous" onclick="previousPage()" value="previous" />
+          <input type="button" id="last" onclick="lastPage()" value="last" />
+    
+          
+   
+
+    <script src="employee.js"></script>
+  </body>
+</html>
