@@ -28,6 +28,7 @@ window.onload = ()=>{
         emp_arr.push(EMPLOYEE_INFO);
         localStorage.setItem("total_emp_array", JSON.stringify(emp_arr));
     }
+      window.location.href="./Employee.html";
   }
 
 //*****************************************ResetForm************************************************************************************************** */
